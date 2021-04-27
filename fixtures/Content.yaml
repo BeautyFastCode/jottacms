@@ -1,0 +1,22 @@
+
+App\Entity\Content:
+
+  content_1:
+    id: <uuid()>
+    page: '@page_1'
+    createdAt: <dateTimeBetween('-7 days')>
+    updatedAt: <dateTimeBetween('-7 days')>
+    position: 1
+    translations:
+      - '@content_trans_en_1'
+      - '@content_trans_pl_1'
+
+  content_b_{1..10}:
+    id: <uuid()>
+    page: '@page_2'
+    createdAt: <dateTimeBetween('-7 days')>
+    updatedAt: <dateTimeBetween('-7 days')>
+    position: <current()>
+    translations:
+      - '@content_trans_en_b_<current()>'
+      - '@content_trans_pl_b_<current()>'

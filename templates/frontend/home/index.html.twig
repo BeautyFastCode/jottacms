@@ -1,0 +1,50 @@
+{% extends 'frontend/layout.html.twig' %}
+
+{% block navbar %}{% endblock %}
+
+{% block header_content %}
+    <section class="header-content">
+        <div class="container title">
+            <div class="icon">
+                <i class="fab fa-4x fa-php"></i>
+            </div>
+            <div class="content">
+                <h1 class="display-4 my-0">{{ 'phpDeveloper'|trans }}</h1>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block main_content %}
+
+    <section class="mb-4">
+
+        <div class="page-list">
+            {% for page in pages %}
+
+                {{ page.setCurrentLocale(app.request.locale) }}
+
+                <div class="page-item">
+                    <div class="icon">
+                        <i class="fa-4x {{ page.icon }}"></i>
+                    </div>
+                    <div class="content">
+                        <h3>
+                            <a href="{{ path('app_frontend_page', {slug: page.slug}) }}"
+                               class="text-decoration-none">{{ page.title }}</a>
+                        </h3>
+                        <div>{{ page.lead|raw }}</div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+{#    <section>#}
+{#        <div data-controller="hello">#}
+{#            <input data-hello-target="input" type="text" />#}
+{#            <span data-hello-target="output"></span>#}
+{#        </div>#}
+{#    </section>#}
+
+{% endblock %}

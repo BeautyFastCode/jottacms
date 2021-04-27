@@ -1,0 +1,26 @@
+
+
+phpDeveloper: Programista PHP
+language: Język
+dashboard: Panel administracyjny
+
+signin: Zaloguj się!
+logged: Jesteś zalogowany jako
+logout: Wyloguj się!
+
+email: E-mail
+password: Hasło
+
+theme:
+  label: Motyw
+  light: Jasny
+  dark: Ciemny
+
+#
+# Errors
+#
+403: Nie masz dostępu do tej strony
+404: Nie można znaleźć żądanej strony. Sprawdź, czy nie ma błędów w pisowni adresu URL lub
+any: Coś jest zepsute. Daj nam znać, co robiłeś, gdy wystąpił ten błąd. Naprawimy to tak szybko, jak to możliwe. Przepraszamy za wszelkie niedogodności.
+
+returntoHome: Wróć do strony głównej

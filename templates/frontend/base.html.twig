@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="{{ app.request.locale|slice(0, 2) }}">
+<head>
+    <meta charset="utf-8">
+    <title>
+        {% block title %}{{ 'phpDeveloper'|trans }} | bogumil.dev {% endblock %}
+    </title>
+
+    {% block favicon %}
+        <link rel="icon" type="image/png" sizes="128x128" href="{{ asset('build/frontend/images/favicon-128x128.png') }}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('build/frontend/images/favicon-96x96.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('build/frontend/images/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('build/frontend/images/favicon-16x16.png') }}">
+        <link rel="icon" type="image/ico" href="{{ asset('build/frontend/images/favicon.ico') }}">
+    {% endblock %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app', null, 'frontend') }}
+    {% endblock %}
+
+    <script src="{{ path('app_frontend_translation_js') }}"></script>
+
+</head>
+<body>
+    <script>{{ include('frontend/_theme-initialize.js.twig') }}</script>
+
+    {% block body %}{% endblock %}
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app', null, 'frontend') }}
+    {% endblock %}
+</body>
+</html>

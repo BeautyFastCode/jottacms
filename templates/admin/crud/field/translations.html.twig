@@ -1,0 +1,10 @@
+
+<div>
+    {% for translation in field.value %}
+            <p><strong>Locale: {{ translation.locale }}</strong></p>
+            <p>Title: {{ translation.title }}</p>
+            <p>Slug: {{ translation.slug }}</p>
+            <p>Lead: {{ translation.lead|raw }}</p>
+        <hr>
+    {% endfor %}
+</div>

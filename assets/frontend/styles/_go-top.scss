@@ -1,0 +1,44 @@
+
+@import "variables";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/functions";
+
+.go-top {
+
+  position: fixed;
+  bottom: 5rem;
+  right: 0.5rem;
+
+  overflow: hidden;
+
+  width: 3rem;
+  height: 3rem;
+
+  &.active {
+    a {
+      opacity: 1;
+      right: 0;
+
+    }
+  }
+
+  a {
+    color: $secondary;
+
+    opacity: 0;
+    position: relative;
+    right: -100%;
+
+    transition: all 200ms ease-in-out;
+
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+
+
+    &:hover {
+      color: shift-color($secondary, $link-shade-percentage);
+    }
+  }
+}
+

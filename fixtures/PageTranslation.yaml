@@ -1,0 +1,44 @@
+
+App\Entity\PageTranslation:
+
+  page_trans_en_1:
+    id: <uuid()>
+    locale: en
+    title: Projects
+    slug: projects
+    lead: Projects I participated in creating
+
+  page_trans_pl_1:
+    id: <uuid()>
+    locale: pl
+    title: Projekty
+    slug: projekty
+    lead: Projekty przy tworzeniu których uczestniczyłem
+
+  page_trans_en_2:
+    id: <uuid()>
+    locale: en
+    title: Tasks
+    slug: tasks
+    lead: Some tasks that I had the pleasure to carry out
+
+  page_trans_pl_2:
+    id: <uuid()>
+    locale: pl
+    title: Zadania
+    slug: zadania
+    lead: Niektóre zadania jakie miałem przyjemność realizować
+
+  page_trans_en_3:
+    id: <uuid()>
+    locale: en
+    title: Tools
+    slug: tools
+    lead: Which I like to use every day
+
+  page_trans_pl_3:
+    id: <uuid()>
+    locale: pl
+    title: Narzędzia
+    slug: narzedzia
+    lead: Które lubię używać na co dzień

@@ -1,0 +1,21 @@
+
+.wrapper {
+  .content-wrapper {
+    .content {
+      .content-header {
+
+        background-color: var(--content-panel-bg);
+        border-radius: var(--border-radius);
+
+        margin-top: 16px;
+        margin-bottom: 16px;
+        padding: 8px;
+      }
+
+      .content-body {
+        //margin-top: 24px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,9 @@
+{# templates/bundles/EasyAdminBundle/layout.html.twig #}
+
+{# DO THIS: the '!' symbol tells Symfony to extend from the original template #}
+{% extends '@!EasyAdmin/layout.html.twig' %}
+
+{% block head_javascript %}
+    {{ parent() }}
+    <script src="{{ asset('build/admin/ckeditor5/ckeditor.js') }}"></script>
+{% endblock head_javascript %}

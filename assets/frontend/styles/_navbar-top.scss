@@ -1,0 +1,21 @@
+@import "~bootstrap/scss/mixins/breakpoints";
+
+#navbar-top {
+  .socialmedia {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+
+      display: flex;
+    }
+  }
+
+  .dropdown-label {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+
+      display: inline;
+    }
+  }
+}

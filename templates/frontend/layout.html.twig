@@ -1,0 +1,33 @@
+{% extends 'frontend/base.html.twig' %}
+
+{% set pages = menuService.getPages(app.request.locale) %}
+
+{% block body %}
+    <header>
+        {% block navbar_top %}
+            {{ include('frontend/_navbar_top.html.twig') }}
+        {% endblock %}
+        {% block navbar %}
+            {{ include('frontend/_navbar.html.twig') }}
+        {% endblock %}
+        {% block header_content %}{% endblock %}
+    </header>
+
+    <main role="main" class="container mt-4">
+        {% block main_content %}
+        {% endblock %}
+    </main>
+
+    <footer class="mb-5">
+        {% block footer_content %}
+            {{ include('frontend/_footer.html.twig') }}
+        {% endblock %}
+    </footer>
+
+    <div class="go-top" data-controller="go-top">
+        <a href="#" >
+            <i class="fas fa-3x fa-arrow-circle-up"></i>
+        </a>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+
+{% block ckeditor5_widget %}
+    <textarea {{ block('widget_attributes') }}>{{ value }}</textarea>
+
+    <script>
+
+        MarkdownEditor
+            .create( document.querySelector( '#{{ id }}' ) )
+            .then( editor => {
+                window.editor = editor;
+            } )
+            .catch( error => {
+                console.error( 'There was a problem initializing the editor.', error );
+            } );
+    </script>
+
+{% endblock %}

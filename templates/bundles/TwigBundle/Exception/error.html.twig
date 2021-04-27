@@ -1,0 +1,25 @@
+{% extends 'frontend/layout.html.twig' %}
+
+{% block navbar %}{% endblock %}
+
+{% block header_content %}
+    <section class="header-content">
+        <div class="container title">
+            <div class="icon">
+                <i class="fas fa-4x fa-exclamation-triangle"></i>
+            </div>
+            <div class="content">
+                <h1 class="display-4 my-0">{{ status_code }} - {{ status_text }}</h1>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block main_content %}
+    <section class="main-content mb-4 px-4 py-4">
+        <p>
+            <span>{{ 'any'|trans }}</span>
+            <a class="btn btn-outline-primary m-2" href="{{ path('app_frontend_homepage') }}">{{ 'returntoHome'|trans }}</a>
+        </p>
+    </section>
+{% endblock %}

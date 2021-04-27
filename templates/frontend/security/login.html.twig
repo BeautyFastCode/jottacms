@@ -1,0 +1,66 @@
+{% extends 'frontend/layout.html.twig' %}
+
+{% block title %}{{ 'signin'|trans }} | {{ parent() }}{% endblock %}
+
+{% block navbar %}{% endblock %}
+
+{% block header_content %}
+    <section class="header-content">
+        <div class="container title">
+            <div class="icon">
+                <i class="fa fa-4x fa-sign-in-alt"></i>
+            </div>
+            <div class="content">
+                <h1 class="display-4 my-0">{{ 'signin'|trans }}</h1>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block main_content %}
+    <section class="main-content mb-4 px-4 py-4">
+        <form method="post">
+
+            {% if error %}
+                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+
+            {% if app.user %}
+                <div class="my-3">
+                    <span>{{ 'logged'|trans }} {{ app.user.username }}</span>
+                    <a href="{{ path('app_logout') }}" class="btn btn-outline-primary">{{ 'logout'|trans }}</a>
+                </div>
+            {% endif %}
+
+            <div>
+                <label for="inputEmail">{{ 'email'|trans }}</label>
+                <input type="email" value="{{ last_username }}" name="email"
+                       id="inputEmail" class="form-control" required autofocus>
+            </div>
+
+            <div class="mt-4">
+                <label for="inputPassword">{{ 'password'|trans }}</label>
+                <input type="password" name="password" id="inputPassword" class="form-control" required>
+
+                <input type="hidden" name="_csrf_token"
+                       value="{{ csrf_token('authenticate') }}"
+                >
+            </div>
+
+            {#
+                Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                See https://symfony.com/doc/current/security/remember_me.html
+
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" name="_remember_me"> Remember me
+                    </label>
+                </div>
+            #}
+
+            <button class="btn btn-lg btn-primary mt-4" type="submit">
+                {{ 'signin'|trans }}
+            </button>
+        </form>
+    </section>
+{% endblock %}

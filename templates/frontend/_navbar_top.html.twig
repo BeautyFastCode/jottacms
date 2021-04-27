@@ -1,0 +1,41 @@
+<nav id="navbar-top" class="navbar navbar-expand navbar-dark">
+
+    <div class="container">
+        <a class="navbar-brand" href="{{ path('app_frontend_homepage') }}">
+            <div id="header-logo" class="d-inline-block align-items-center" style="width: 25px; height: 25px;">
+                {{ source('@public_path'~asset('build/frontend/images/bfc-logo-eye.svg')) }}
+            </div>
+            <small>bogumil.dev</small>
+        </a>
+
+        <ul class="navbar-nav me-auto socialmedia">
+            <li>
+                <a href="mailto:bogumilbr@gmail.com"><i class="fa fa-envelope"></i></a>
+            </li>
+            <li>
+                <a href="https://github.com/BeautyFastCode"><i class="fab fa-github"></i></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/bogumil/"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav">
+
+            {{ include('frontend/_theme-switcher.html.twig') }}
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownLocale" role="button"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-language"></i>
+                    <span class="dropdown-label">{{ 'language'|trans }}:</span> {{ app.request.locale|locale_name(app.request.locale)|u.title }}
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownLocale">
+                    <li><a class="dropdown-item" href="{{ path('app_frontend_homepage', {_locale: 'en'}) }}">English</a></li>
+                    <li><a class="dropdown-item" href="{{ path('app_frontend_homepage', {_locale: 'pl'}) }}">Polski</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</nav>

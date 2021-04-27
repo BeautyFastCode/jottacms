@@ -1,0 +1,26 @@
+
+App\Entity\ContentTranslation:
+
+  content_trans_en_1:
+    id: <uuid()>
+    locale: en
+    title: Jotta CMS
+    text: Jotta CMS - this is the project you are currently viewing
+
+  content_trans_pl_1:
+    id: <uuid()>
+    locale: pl
+    title: Jotta CMS
+    text: Jotta CMS - to jest ten projekt który właśnie oglądasz
+
+  content_trans_en_b_{1..10}:
+    id: <uuid()>
+    locale: en
+    title: <en_US:realText(32, 1)>
+    text: <en_US:realText(256, 1)>
+
+  content_trans_pl_b_{1..10}:
+    id: <uuid()>
+    locale: pl
+    title: <pl_PL:realText(32, 1)>
+    text: <pl_PL:realText(256, 1)>

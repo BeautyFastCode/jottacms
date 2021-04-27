@@ -1,0 +1,39 @@
+
+// Font Awesome 5
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+// Google Fonts
+@import "fonts";
+
+// Themes
+@import "theme-dark";
+@import "theme-light";
+
+// Customize some Bootstrap variables
+@import "variables";
+
+// Import Bootstrap ALL styles
+@import "~bootstrap/scss/bootstrap";
+
+// or selected
+
+// Configuration
+//@import "~bootstrap/scss/functions";
+//@import "~bootstrap/scss/variables";
+//@import "~bootstrap/scss/mixins";
+//@import "~bootstrap/scss/utilities";
+
+// Layout & components
+//@import "~bootstrap/scss/alert";
+
+// App Components
+@import "navbar-top";
+@import "socialmedia";
+@import "header";
+@import "page-list";
+@import "main";
+@import "go-top";
+
+body {
+    background-color: var(--page-background);
+}

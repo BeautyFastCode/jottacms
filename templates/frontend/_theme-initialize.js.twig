@@ -1,0 +1,4 @@
+
+document.body.classList.add(
+    localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'theme-dark' : 'theme-light')
+);

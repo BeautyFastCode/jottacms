@@ -1,0 +1,9 @@
+
+App\Entity\Admin:
+
+  admin_1:
+    id: <uuid()>
+    email: admin@jottacms.test
+
+    # admin
+    password: '\$argon2id\$v=19\$m=65536,t=4,p=1\$SQd/PhMI6fexJy8BpT+7iw\$zj9+l0oKzP4hQRjUTRB8EmuLLCMPOk04mgk41zNkJ10'

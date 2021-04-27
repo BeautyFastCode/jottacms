@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-md
+        navbar-dark bg-primary py-0">
+
+    <div class="container">
+
+        <button class="navbar-toggler my-2" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto">
+
+                {% for page in pages %}
+                    {{ page.setCurrentLocale(app.request.locale) }}
+
+                    <li class="nav-item">
+
+                        {% if is_active(page.slug) %}
+                            <a class="nav-link active" aria-current="page"
+                               href="{{ path('app_frontend_page', {slug: page.slug}) }}">
+                                <i class="{{ page.icon }}"></i>
+                                <span>{{ page.title }}</span>
+                            </a>
+                        {% else %}
+                            <a class="nav-link"
+                               href="{{ path('app_frontend_page', {slug: page.slug}) }}">
+                                <i class="{{ page.icon }}"></i>
+                                <span>{{ page.title }}</span>
+                            </a>
+                        {% endif %}
+
+                    </li>
+                {% endfor %}
+
+            </ul>
+        </div>
+
+    </div>
+</nav>

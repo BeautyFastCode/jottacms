@@ -1,0 +1,32 @@
+
+App\Entity\Page:
+
+  page_1:
+    id: <uuid()>
+    icon: fa fa-project-diagram
+    createdAt: <dateTimeBetween('-7 days')>
+    updatedAt: <dateTimeBetween('-7 days')>
+    position: 1
+    translations:
+      - '@page_trans_en_1'
+      - '@page_trans_pl_1'
+
+  page_2:
+    id: <uuid()>
+    icon: fa fa-tasks
+    createdAt: <dateTimeBetween('-7 days')>
+    updatedAt: <dateTimeBetween('-7 days')>
+    position: 2
+    translations:
+      - '@page_trans_en_2'
+      - '@page_trans_pl_2'
+
+  page_3:
+    id: <uuid()>
+    icon: fa fa-tools
+    createdAt: <dateTimeBetween('-7 days')>
+    updatedAt: <dateTimeBetween('-7 days')>
+    position: 3
+    translations:
+      - '@page_trans_en_3'
+      - '@page_trans_pl_3'

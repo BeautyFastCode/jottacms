@@ -1,0 +1,28 @@
+doctrine:
+    dbal:
+        url: '%env(resolve:DATABASE_URL)%'
+
+        # IMPORTANT: You MUST configure your server version,
+        # either here or in the DATABASE_URL env var (see .env file)
+        #server_version: '13'
+
+        types:
+            uuid: App\DoctrineExtensions\Types\UuidType
+
+    orm:
+        auto_generate_proxy_classes: true
+        naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
+        auto_mapping: true
+        mappings:
+            App:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/Entity'
+                prefix: 'App\Entity'
+                alias: App
+
+        resolve_target_entities:
+            App\Entity\PageInterface: App\Entity\Page
+            App\Entity\PageTranslationInterface: App\Entity\PageTranslation
+            App\Entity\ContentInterface: App\Entity\Content
+            App\Entity\ContentTranslationInterface: App\Entity\ContentTranslation

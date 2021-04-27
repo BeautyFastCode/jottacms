@@ -1,0 +1,16 @@
+
+{#<div class="form-widget">#}
+<div>
+    {% for content in field.value %}
+        <p><strong>{{ content.title }}</strong></p>
+        <p>{{ content.text|raw }}</p>
+
+        <p class="field-boolean">
+            <span class="mr-2">Enabled</span>
+            <span class="badge {{ content.enabled == true ? 'badge-boolean-true' : 'badge-boolean-false' }}">
+            {{ (content.enabled == true ? 'label.true' : 'label.false')|trans({}, 'EasyAdminBundle') }}
+            </span>
+        </p>
+        <hr>
+    {% endfor %}
+</div>

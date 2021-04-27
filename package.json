@@ -1,0 +1,36 @@
+{
+    "name": "jottacms",
+    "description": "Micro CMS based on the PHP Symfony framework.",
+    "main": "public/index.php",
+    "repository": "https://github.com/BeautyFastCode/jottacms.git",
+    "authors": [
+        {
+            "name": "Bogumił Brzeziński",
+            "homepage": "http://beautyfastcode.com/",
+            "email": "beautyfastcode@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "devDependencies": {
+        "@beyonk/google-fonts-webpack-plugin": "^1.5.0",
+        "@fortawesome/fontawesome-free": "^5.15.1",
+        "@jdinabox/ckeditor5-build-markdown": "^21.0.0",
+        "@popperjs/core": "^2.6.0",
+        "@symfony/stimulus-bridge": "^1.1.0",
+        "@symfony/webpack-encore": "^0.32.0",
+        "bootstrap": "^5.0.0-beta1",
+        "core-js": "^3.0.0",
+        "node-sass": "^4.0.0",
+        "regenerator-runtime": "^0.13.2",
+        "sass-loader": "^9.0.1",
+        "stimulus": "^2.0.0",
+        "webpack-notifier": "^1.6.0"
+    },
+    "scripts": {
+        "dev-server": "encore dev-server",
+        "dev": "encore dev",
+        "watch": "encore dev --watch",
+        "build": "encore production --progress"
+    },
+    "dependencies": {}
+}
